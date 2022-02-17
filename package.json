@@ -1,6 +1,6 @@
 {
   "name": "@locmod/local-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "local, session and memory storage manager",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   "homepage": "https://github.com/Local-Modules/local-storage#readme",
   "module": "dist/index.es.js",
   "main": "lib/index.js",
-  "types": "./index.d.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "dev": "rollup -cw",

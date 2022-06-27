@@ -144,6 +144,11 @@ class LocalStorage {
     this.set<T>(name, value, this.getLocalStorage())
   }
 
+  public updateItem<T = any>(name: string, fn: (item: T) => T) {
+    const item = this.getItem(name)
+    this.set<T>(name, fn(item), this.getLocalStorage())
+  }
+
   public removeItem(name: string) {
     this.remove(name, this.getLocalStorage())
   }
@@ -169,6 +174,5 @@ class LocalStorage {
     return this.keys(this.getSessionStorage())
   }
 }
-
 
 export default LocalStorage

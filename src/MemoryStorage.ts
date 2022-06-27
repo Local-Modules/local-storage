@@ -32,5 +32,4 @@ class MemoryStorage implements Storage {
   }
 }
 
-
 export default MemoryStorage

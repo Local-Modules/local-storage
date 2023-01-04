@@ -166,6 +166,11 @@ class LocalStorage {
     this.set(name, value, this.getSessionStorage())
   }
 
+  public updateSessionItem<T = any>(name: string, fn: (item: T) => T) {
+    const item = this.getSessionItem(name)
+    this.set<T>(name, fn(item), this.getSessionStorage())
+  }
+
   public removeSessionItem(name: string) {
     this.remove(name, this.getSessionStorage())
   }

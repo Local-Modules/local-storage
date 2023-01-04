@@ -30,7 +30,6 @@ const StoragePage = () => {
   )
 }
 
-
 export default StoragePage
 ```
 
@@ -90,9 +89,18 @@ localStorage.setItem<number>('counter', 42)
 
 ```ts
 localStorage.setItem<{ value: number, lastUpdate: string }>('data', { 
-  value: value + 1, 
-  lastUpdate: (new Date).toISOString(), 
+  value: 2, 
+  lastUpdate: new Date().toISOString(), 
 })
+```
+
+### updateItem
+
+```ts
+localStorage.updateItem<{ value: number, lastUpdate: string }>('data', (currItem) => ({
+  value: currItem.value + 1,
+  lastUpdate: new Date().toISOString(),
+}))
 ```
 
 ### removeItem
@@ -118,6 +126,10 @@ const keys = localStorage.getKeys()
 The same as `getItem` but for `sessionStorage`.
 
 ### setSessionItem
+
+The same as `setItem` but for `sessionStorage`.
+
+### updateSessionItem
 
 The same as `setItem` but for `sessionStorage`.
 

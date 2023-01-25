@@ -1,6 +1,6 @@
 {
   "name": "@locmod/local-storage",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "local, session and memory storage manager",
   "repository": {
     "type": "git",
